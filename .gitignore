@@ -1,0 +1,13 @@
+# 忽略所有 node_modules (不管在哪一層)
+**/node_modules/
+
+# 忽略資料庫檔案
+#*.db
+#*.sqlite
+#*.sqlite3
+
+# 忽略環境變數與系統檔
+.env
+.DS_Store
+dist/
+build/
