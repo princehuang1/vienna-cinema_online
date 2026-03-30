@@ -201,7 +201,7 @@ function HomePage() {
             {extendedSlides.map((movie, index) => (
               <div key={`${movie.id}-${index}`} className="min-w-full h-full relative flex-shrink-0">
                 <img
-                  src={movie.poster}
+                  src={`${import.meta.env.BASE_URL}${movie.poster}`}
                   alt={movie.title}
                   className="absolute inset-0 w-full h-full object-cover brightness-50"
                 />
@@ -288,8 +288,9 @@ function HomePage() {
                 rel="noopener noreferrer"
                 className="block relative rounded-xl overflow-hidden shadow-xl group transition-all duration-300 h-96 border border-neutral-800 hover:border-purple-500/30"
             >
+              {/* 🔥 修改處：加上 BASE_URL */}
               <img
-                src={newsItems[0].image} 
+                src={`${import.meta.env.BASE_URL}${newsItems[0].image}`} 
                 alt={newsItems[0].title}
                 className="w-full h-full object-cover brightness-90 group-hover:brightness-75 transition duration-500 transform group-hover:scale-105" 
               />
@@ -311,8 +312,9 @@ function HomePage() {
                     rel="noopener noreferrer"
                     className="block relative rounded-xl overflow-hidden shadow-lg group transition-all duration-300 border border-neutral-800 hover:border-purple-500/30"
                   >
+                    {/* 🔥 修改處：加上 BASE_URL */}
                     <img 
-                        src={item.image} 
+                        src={`${import.meta.env.BASE_URL}${item.image}`} 
                         alt={item.title} 
                         className="w-full h-full object-cover brightness-90 group-hover:brightness-75 transition duration-500 transform group-hover:scale-105" 
                     />

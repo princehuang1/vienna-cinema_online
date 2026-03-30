@@ -231,7 +231,7 @@ function MovieDetailPage() {
                 </div>
                 <div className="w-full lg:w-2/5 flex justify-center lg:justify-end">
                     <div className="relative w-[300px] lg:w-[400px] aspect-[2/3] rounded-xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-neutral-700/50 group transform hover:scale-[1.02] transition-transform duration-500">
-                        <img src={movie.posterUrl} alt={movie.movieName} className="w-full h-full object-cover" />
+                        <img src={`${import.meta.env.BASE_URL}${movie.posterUrl}`} alt={movie.movieName} className="w-full h-full object-cover" />
                         <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl pointer-events-none"></div>
                     </div>
                 </div>
@@ -253,7 +253,7 @@ function MovieDetailPage() {
                                 {item.type === 'video' ? (
                                     <iframe src={item.src} title="Trailer" className="w-full h-full pointer-events-auto" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                                 ) : (
-                                    <img src={item.src} alt={`Still ${index}`} className="w-full h-full object-cover transition-transform duration-500 group-hover/item:scale-110" />
+                                    <img src={`${import.meta.env.BASE_URL}${item.src}`} alt={`Still ${index}`} className="w-full h-full object-cover transition-transform duration-500 group-hover/item:scale-110" />
                                 )}
                             </div>
                         </div>

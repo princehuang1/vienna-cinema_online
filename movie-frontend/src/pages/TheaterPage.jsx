@@ -45,8 +45,9 @@ function TheaterPage() {
             >
               {/* 左側：圖片 (固定寬度 50% 或 45%) */}
               <div className="w-full md:w-5/12 h-64 md:h-auto relative group">
+                {/* 🔥 修改處：加上 BASE_URL */}
                 <img 
-                  src={theater.image} 
+                  src={`${import.meta.env.BASE_URL}${theater.image}`} 
                   alt={theater.name} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />

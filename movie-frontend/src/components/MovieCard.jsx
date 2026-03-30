@@ -15,7 +15,7 @@ function MovieCard({ movie }) {
       
       {/* 使用縱橫比樣式 (aspect-[2/3]) 保持海報比例 */}
       <img
-        src={posterUrl} 
+        src={`${import.meta.env.BASE_URL}${posterUrl}`}
         alt={movie.title}
         className="w-full aspect-[2/3] object-cover" 
         onError={(e) => { 

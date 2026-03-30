@@ -33,8 +33,9 @@ function ShowtimeMovieCard({ movie, onError, theater, selectedDate }) {
     <div className="bg-neutral-800 rounded-xl overflow-hidden shadow-xl flex transition-all duration-300 ease-in-out hover:shadow-purple-500/30">
       
       <div className="w-1/3 md:w-1/4 flex-shrink-0 h-76"> 
+        {/* 🔥 修改處：補上 ${import.meta.env.BASE_URL} 變數 */}
         <img 
-          src={movie.posterUrl} 
+          src={`${import.meta.env.BASE_URL}${movie.posterUrl}`}
           alt={movie.movieName}
           className="w-full h-full object-cover" 
         />
