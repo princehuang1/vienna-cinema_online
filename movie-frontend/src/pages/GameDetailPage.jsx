@@ -186,7 +186,7 @@ function GameDetailPage() {
                             {item.type === 'video' ? (
                                 <iframe className="w-full h-full" src={item.src} title="Trailer" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                             ) : (
-                                <img src={item.src} alt={`Screenshot ${index}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                                <img src={`${import.meta.env.BASE_URL}${item.src}`} alt={`Screenshot ${index}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
                             )}
                         </div>
                     </div>
@@ -232,7 +232,7 @@ function GameDetailPage() {
                 {/* 圖片區 */}
                 <div className="w-full md:w-1/2">
                     <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-neutral-800">
-                        <img src={feature.image} alt={feature.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                        <img src={`${import.meta.env.BASE_URL}${feature.image}`} alt={feature.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                     </div>
                 </div>
             </div>
