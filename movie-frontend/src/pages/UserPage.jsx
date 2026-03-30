@@ -139,7 +139,7 @@ function UserPage() {
     setUser(parsedUser);
     setEditForm({ userName: parsedUser.userName, userPhone: parsedUser.userPhone });
 
-    axios.get(`http://localhost:4000/api/users/${parsedUser.userId}/orders`)
+    axios.get(`https://vienna-cinema-online.onrender.com/api/users/${parsedUser.userId}/orders`)
       .then(res => {
         setOrders(res.data);
         setLoading(false);
@@ -158,7 +158,7 @@ function UserPage() {
 
   const handleSaveProfile = async () => {
       try {
-          const res = await axios.put(`http://localhost:4000/api/users/${user.userId}`, {
+          const res = await axios.put(`https://vienna-cinema-online.onrender.com/api/users/${user.userId}`, {
               userName: editForm.userName,
               userPhone: editForm.userPhone, // 信箱不傳送，後端也不更新
               savedCard: user.savedCard
@@ -189,7 +189,7 @@ function UserPage() {
       }
 
       try {
-          const res = await axios.put(`http://localhost:4000/api/users/${user.userId}`, {
+          const res = await axios.put(`https://vienna-cinema-online.onrender.com/api/users/${user.userId}`, {
               userName: user.userName,
               userPhone: user.userPhone,
               savedCard: cardData.number
@@ -208,7 +208,7 @@ function UserPage() {
   const handleDeleteCard = async () => {
       if(!window.confirm("確定要解除綁定嗎？")) return;
       try {
-        const res = await axios.put(`http://localhost:4000/api/users/${user.userId}`, {
+        const res = await axios.put(`https://vienna-cinema-online.onrender.com/api/users/${user.userId}`, {
             userName: user.userName,
             userPhone: user.userPhone,
             savedCard: null
@@ -224,7 +224,7 @@ function UserPage() {
   const handleCancelOrder = async (orderId) => {
       if (!window.confirm("確定要取消這筆訂單嗎？")) return;
       try {
-          await axios.patch(`http://localhost:4000/api/orders/${orderId}/cancel`);
+          await axios.patch(`https://vienna-cinema-online.onrender.com/api/orders/${orderId}/cancel`);
           setOrders(prev => prev.map(order => 
               order.bookingId === orderId ? { ...order, bookingStatus: 'Cancelled' } : order
           ));

@@ -128,7 +128,7 @@ function MovieDetailPage() {
   // --- Fetch Data ---
   useEffect(() => {
     setLoading(true);
-    axios.get(`http://localhost:4000/api/movies/${movieId}`)
+    axios.get(`https://vienna-cinema-online.onrender.com/api/movies/${movieId}`)
       .then(response => {
         const fetchedMovie = response.data;
         setMovie(fetchedMovie);

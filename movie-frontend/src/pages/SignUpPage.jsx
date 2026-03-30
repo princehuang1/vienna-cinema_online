@@ -25,7 +25,7 @@ function SignUpPage() {
     // 🔥 移除所有驗證邏輯 (Demo 用)
     
     try {
-      const res = await axios.post('http://localhost:4000/api/register', {
+      const res = await axios.post('https://vienna-cinema-online.onrender.com/api/register', {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,

@@ -85,7 +85,7 @@ function ShowtimePage() {
 
   // --- API 呼叫 ---
   useEffect(() => {
-    axios.get('http://localhost:4000/api/movies?status=Now Playing')
+    axios.get('https://vienna-cinema-online.onrender.com/api/movies?status=Now Playing')
       .then(response => {
         setMovies(response.data);
         setLoading(false);

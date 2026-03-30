@@ -9,7 +9,7 @@ function MealSelector({ onMealChange }) {
 
   // 1. 從 API 獲取餐飲資料
   useEffect(() => {
-    axios.get('http://localhost:4000/api/concessions')
+    axios.get('https://vienna-cinema-online.onrender.com/api/concessions')
       .then(res => {
         // 🎯 這裡進行篩選：只保留 category 為 'Concession' 或 null (舊資料) 的項目
         // 🎯 並且 **不進行排序**，直接依照資料庫順序顯示

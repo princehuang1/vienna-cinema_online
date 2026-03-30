@@ -17,7 +17,7 @@ function GameDetailPage() {
 
   // --- Fetch Data ---
   useEffect(() => {
-    axios.get(`http://localhost:4000/api/games/${id}`)
+    axios.get(`https://vienna-cinema-online.onrender.com/api/games/${id}`)
       .then(res => {
         setGame(res.data);
         setLoading(false);

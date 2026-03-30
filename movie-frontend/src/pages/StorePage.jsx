@@ -317,8 +317,8 @@ function StorePage() {
 
   // 2. 一次抓取所有資料 (API)
   useEffect(() => {
-    const fetchGames = axios.get('http://localhost:4000/api/games');
-    const fetchOthers = axios.get('http://localhost:4000/api/concessions'); // 假設此 API 回傳所有非遊戲商品
+    const fetchGames = axios.get('https://vienna-cinema-online.onrender.com/api/games');
+    const fetchOthers = axios.get('https://vienna-cinema-online.onrender.com/api/concessions'); // 假設此 API 回傳所有非遊戲商品
 
     Promise.all([fetchGames, fetchOthers])
       .then(([gamesRes, othersRes]) => {

@@ -13,7 +13,7 @@ function MovieInfoPage() {
   // --- Data Fetching Effect ---
   // 1. 頁面載入時，抓取「所有」電影 (13 部)
   useEffect(() => {
-    axios.get('http://localhost:4000/api/movies')
+    axios.get('https://vienna-cinema-online.onrender.com/api/movies')
       .then(response => {
         setAllMovies(response.data);
         setFilteredMovies(response.data); // 預設顯示全部

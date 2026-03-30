@@ -165,8 +165,8 @@ function HomePage() {
 
   // 5. 抓取電影資料
   useEffect(() => {
-    const fetchNowShowing = axios.get('http://localhost:4000/api/movies?status=Now Playing');
-    const fetchComingSoon = axios.get('http://localhost:4000/api/movies?status=Coming Soon');
+    const fetchNowShowing = axios.get('https://vienna-cinema-online.onrender.com/api/movies?status=Now Playing');
+    const fetchComingSoon = axios.get('https://vienna-cinema-online.onrender.com/api/movies?status=Coming Soon');
 
     Promise.all([fetchNowShowing, fetchComingSoon])
       .then((results) => {

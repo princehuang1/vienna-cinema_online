@@ -88,7 +88,7 @@ function PaymentPage() {
 
         try {
             // 呼叫後端 API
-            await axios.post('http://localhost:4000/api/orders', orderPayload);
+            await axios.post('https://vienna-cinema-online.onrender.com/api/orders', orderPayload);
             console.log("訂單已成功儲存至資料庫");
         } catch (err) {
             console.error("訂單儲存失敗:", err);

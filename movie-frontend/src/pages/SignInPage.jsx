@@ -15,7 +15,7 @@ function SignInPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:4000/api/login', loginData);
+      const res = await axios.post('https://vienna-cinema-online.onrender.com/api/login', loginData);
       localStorage.setItem('user', JSON.stringify(res.data));
       alert('登入成功！');
       navigate('/');
@@ -27,7 +27,7 @@ function SignInPage() {
   const handleResetPassword = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:4000/api/reset-password', resetData);
+      const res = await axios.post('https://vienna-cinema-online.onrender.com/api/reset-password', resetData);
       setMessage({ type: 'success', text: res.data.message });
       setTimeout(() => {
         setIsForgotPassword(false);
