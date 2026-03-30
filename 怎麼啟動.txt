@@ -1,5 +1,0 @@
-最開始的時候，
-	在frontend/目錄底下開啟終端(cmd)後輸入"npm install"並等他跑完
-	在backend/目錄底下開啟終端(cmd)後輸入"npm install"並等他跑完
-	在VIEENA_CINEMA/目錄底下開啟終端(cmd)後輸入"npm install"並等他跑完
-爾後只需在VIEENA_CINEMA/打"npm run dev"就可以開啟前後端功能

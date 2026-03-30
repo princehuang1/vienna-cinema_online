@@ -1,13 +1,8 @@
-{
-  "name": "project",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "frontend": "cd movie-frontend && npm run dev",
-    "backend": "cd movie-backend && node index.js",
-    "dev": "concurrently \"npm run frontend\" \"npm run backend\""
-  },
-  "devDependencies": {
-    "concurrently": "^8.2.2"
-  }
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint .",
+  "preview": "vite preview",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
 }
